@@ -9,15 +9,15 @@ document with code
     name: 'supply',
     history: [
       {
-        responcible: 'Stas',
+        responsible: 'Stas',
         state: null
       }, 
       {
-        responcible: 'Lily',
+        responsible: 'Lily',
         state: null
       },
        {
-        responcible: 'Igor',
+        responsible: 'Igor',
         state: null
       }
     ]

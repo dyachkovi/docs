@@ -11,10 +11,10 @@ const DocumentHistory = ({ history }) => {
       {history.map((step) => (
         <Step>
           <StepLabel>
-            {step.responcible}
+            {step.responsible}
           </StepLabel>
           <StepContent>
-            {step.responcible}
+            {step.responsible}
           </StepContent>
         </Step>
       ))}
