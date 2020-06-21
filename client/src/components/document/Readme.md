@@ -28,6 +28,20 @@ document with code
         position: 'CEO',
         state: 'cancel'
       }
+    ],
+    attaches: [
+      {
+        name: 'contract.doc',
+        url: 'URL'
+      },
+      {
+        name: 'contract.pdf',
+        url: 'URL1'
+      },
+      {
+        name: 'price.xls',
+        url: 'URL2'
+      }
     ]
   }
   return <Document {...doc} />

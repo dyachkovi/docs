@@ -18,7 +18,7 @@ const Attaches = withVisible(AttachesBase)
 const History = withVisible(HistoryBase)
 const Information = withVisible(InformationBase)
 
-const Document = ({initiator, classes, code, name, history}) => {
+const Document = ({initiator, classes, code, name, history, attaches}) => {
   const [isOpen, setIsOpen] = React.useState(false) 
   const [selectedTab, setSelectedTab] = React.useState(0)
 
@@ -47,7 +47,7 @@ const Document = ({initiator, classes, code, name, history}) => {
         <Tab label="Information" />
       </Tabs>
       <History visible={selectedTab === 0} history={history} />
-      <Attaches visible={selectedTab === 1} />
+      <Attaches visible={selectedTab === 1} attaches={attaches} />
       <Information visible={selectedTab === 2} />
       
     </Card>
