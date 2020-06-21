@@ -10,15 +10,23 @@ document with code
     history: [
       {
         responsible: 'Stas',
+        position: 'chief supply',
         state: null
       }, 
       {
         responsible: 'Lily',
-        state: null
+        position: 'chief accountant',
+        state: 'negotiated'
       },
-       {
+      {
         responsible: 'Igor',
-        state: null
+        position: 'chief lawyer',
+        state: 'return'
+      },
+      {
+        responsible: 'Ilya',
+        position: 'CEO',
+        state: 'cancel'
       }
     ]
   }
