@@ -12,7 +12,7 @@ import GetAppIcon from '@material-ui/icons/GetApp';
 import Exts from './exts'
 
 const FileIcon = ({name}) => {
-  const [ _, ext ] = name.split('.')
+  const {1: ext} = name.split('.')
   const IconComponent = Exts[ext] || Exts.default 
   
   return <IconComponent />

@@ -2,11 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
 import IconButton from '@material-ui/core/IconButton';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import IconImportContacts from '@material-ui/icons/ImportContacts'
 import IconClose from '@material-ui/icons/Close'
+import 'fontsource-roboto';
 
 import AttachesBase from './attaches/attaches'
 import HistoryBase from './history/history'
@@ -37,19 +39,20 @@ const Document = ({initiator, classes, code, name, history, attaches}) => {
           </IconButton>
         )}
       />
-      <Tabs 
-        value={selectedTab} 
-        onChange={(event, newValue) => setSelectedTab(newValue)} 
-        aria-label="document navigation"
-      >
-        <Tab label="History" />
-        <Tab label="Attaches" />
-        <Tab label="Information" />
-      </Tabs>
-      <History visible={selectedTab === 0} history={history} />
-      <Attaches visible={selectedTab === 1} attaches={attaches} />
-      <Information visible={selectedTab === 2} />
-      
+      <CardContent>
+        <Tabs 
+          value={selectedTab} 
+          onChange={(event, newValue) => setSelectedTab(newValue)} 
+          aria-label="document navigation"
+        >
+          <Tab label="History" />
+          <Tab label="Attaches" />
+          <Tab label="Information" />
+        </Tabs>
+        <History visible={selectedTab === 0} history={history} />
+        <Attaches visible={selectedTab === 1} attaches={attaches} />
+        <Information visible={selectedTab === 2} />
+      </CardContent>
     </Card>
   )
 }
