@@ -7,15 +7,28 @@ const GithubUsers = () => {
   
   React.useEffect(
     () => {
-      const url = `https://api.github.com/search/users?q=${state.q}`
-      dispatch({type: 'load'})
-      fetch(url)
+      const fn = async () => {
+        const url = `https://api.github.com/search/users?q=${state.q}`
+        dispatch({ type: 'load' })
+        const response = await fetch(url)
+        const body = await response.json()
+        dispatch({ type: 'set users', payload: body.items || [] })
+      }
+      fn()
+
+
+      
+
+    /*  fetch(url)
         .then((response) => {
           return response.json()
         })
         .then((body) => {
           dispatch({type: 'set users', payload: body.items || []})
         })
+        .catch((e) => {
+          console.error(e)
+        })    */
     }, 
     [state.q]
   )
